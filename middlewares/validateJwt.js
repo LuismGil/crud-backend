@@ -5,6 +5,7 @@ const validateJWT = (req, res = response, next) => {
   // x-token headers
 
   const token = req.header('x-token');
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
   if (!token) {
     return res.status(401).json({
